@@ -51,7 +51,7 @@ def get_google_sheet_data():
         
         # Obtener todos los registros como una lista de diccionarios
         # Cada diccionario representa una fila, con los encabezados de columna como claves.
-        records = worksheet.get_all_records()
+        records = worksheet.get_all_records(expected_headers=["IMEI", "PDF_URL"])
         
         imei_data = {}
         for row in records:
